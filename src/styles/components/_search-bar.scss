@@ -1,0 +1,47 @@
+.search-bar {
+
+  &__container {
+    @include flex-centered;
+    flex-direction: column;
+    margin: 2rem auto;
+    width: fit-content;
+  }
+
+  &__input, &__button {
+    font-family: inherit;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 2px solid orange;
+    font-size: 1.8rem;
+    background-color: transparent;
+  }
+
+  &__input {
+    margin-right: .5rem;
+    color: orange;
+    font-weight: 500;
+  }
+
+  &__button {
+    background-color: orange;
+    color: grey;
+    transition: transform .1s ease-in-out;
+    
+    &:hover {
+      cursor: pointer;
+      background-color: transparent;
+    }
+    &:active {
+      transform: scale(.95);
+    }
+  }
+
+  &__error {
+    color: #cf0101;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem 0 0 2rem;
+    align-self:flex-start;
+    max-width: 87%;
+  }
+}

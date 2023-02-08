@@ -1,0 +1,31 @@
+.city-details {
+  @include flex-centered;
+  flex-direction: column;
+
+  &__sub-info {
+    display: flex;
+  }
+
+  &__region, &__country {
+    margin-right: 1rem;
+  }
+
+  &__region, &__continent {
+    font-weight: 300;
+  }
+  
+  &__country {
+    color: purple;
+    font-weight: 500;
+    font-size: 1.9rem;
+    margin-top: -.35rem;
+  }
+
+  &__time {
+    font-weight: 200;
+
+    span {
+      font-weight: 500;
+    }
+  }
+}

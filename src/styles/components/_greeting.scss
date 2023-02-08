@@ -1,0 +1,25 @@
+.greeting {
+  @include flex-centered;
+  flex-direction: column;
+  max-width: 70%;
+  margin: 2rem auto;
+  margin-top: 7rem;
+
+  &__heading {
+    font-size: 4rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
+  }
+  
+  &__sub-heading {
+    font-weight: 400;
+    color: purple;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    text-align: justify;
+  }
+}
