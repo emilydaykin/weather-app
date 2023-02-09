@@ -51,7 +51,7 @@ const SearchBar = ({ cityInfo, setCityInfo, setCityWeatherResponse }) => {
         <input
           className="search-bar__input"
           type="text"
-          placeholder="Search any city..."
+          placeholder="Search any city 🔎"
           onChange={handleSearchInputChange}
           value={searchInput}
           onKeyDown={handleKeyPress}

@@ -14,10 +14,13 @@ export default async function handler(req, res) {
     });
   }
 
-  const { city, forecastPeriod, getAirQuality } = req.query;
-  const requestUrl = `${baseURL}key=${process.env.SECRET_KEY}&q=${city}&days=${forecastPeriod}&aqi=${getAirQuality}&alerts=no`;
-
-  const { data } = await axios.get(requestUrl);
-
-  res.status(200).json(data);
+  try {
+    const { city, forecastPeriod, getAirQuality } = req.query;
+    const requestUrl = `${baseURL}key=${process.env.SECRET_KEY}&q=${city}&days=${forecastPeriod}&aqi=${getAirQuality}&alerts=no`;
+    const { data } = await axios.get(requestUrl);
+    return res.status(200).json(data);
+  } catch (err) {
+    // console.error(err);
+    return res.status(500).json({ error: "No data found" });
+  }
 }
