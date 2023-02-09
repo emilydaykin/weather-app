@@ -1,5 +1,7 @@
 import Image from "next/image";
-const CurrentWeather = ({ cityWeatherResponse }) => {
+import React from "react";
+
+const CurrentWeather: React.FC<any> = ({ cityWeatherResponse }) => {
   if (!cityWeatherResponse) return null;
   return (
     <div className="current-weather">

@@ -1,7 +1,8 @@
 import Image from "next/image";
+import React from "react";
 
-const Forecast = ({ cityWeatherResponse }) => {
-  const translateMonth = {
+const Forecast: React.FC<any> = ({ cityWeatherResponse }) => {
+  const translateMonth: { [key: number]: string } = {
     1: "Jan",
     2: "Feb",
     3: "Mar",
@@ -16,7 +17,7 @@ const Forecast = ({ cityWeatherResponse }) => {
     12: "Dec",
   };
 
-  const formatDate = (date) => {
+  const formatDate = (date: string) => {
     const dayInt = parseInt(date.split("-")[2]);
     const monthInt = parseInt(date.split("-")[1]);
     const monthText = translateMonth[monthInt];

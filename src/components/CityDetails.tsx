@@ -1,4 +1,11 @@
-const CityDetails = ({ cityInfo }) => {
+import React from "react";
+import { CityInfo } from "./WeatherContainer";
+
+interface CityInfoProps {
+  cityInfo: CityInfo;
+}
+
+const CityDetails: React.FC<CityInfoProps> = ({ cityInfo }) => {
   const { city, country, region, continent, localDateTime } = cityInfo;
 
   return (

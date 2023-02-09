@@ -1,5 +1,5 @@
 import Head from "next/head";
-import WeatherContainer from "@/components/WeatherContainer";
+import WeatherContainer from "../components/WeatherContainer";
 
 export default function Home() {
   return (

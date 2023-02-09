@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
 import CityDetails from "./CityDetails";
@@ -5,15 +6,23 @@ import CurrentWeather from "./CurrentWeather";
 import Forecast from "./Forecast";
 import Greeting from "./Greeting";
 
-const WeatherContainer = () => {
-  const [cityInfo, setCityInfo] = useState({
+export interface CityInfo {
+  city: string;
+  country: string;
+  region: string;
+  continent: string;
+  localDateTime: string;
+}
+
+const WeatherContainer: React.FC = () => {
+  const [cityInfo, setCityInfo] = useState<CityInfo>({
     city: "",
     country: "",
     region: "",
     continent: "",
     localDateTime: "",
   });
-  const [cityWeatherResponse, setCityWeatherResponse] = useState(null);
+  const [cityWeatherResponse, setCityWeatherResponse] = useState<any>(null);
 
   return (
     <div className="weather-container">

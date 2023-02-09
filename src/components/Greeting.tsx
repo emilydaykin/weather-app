@@ -1,4 +1,6 @@
-const Greeting = () => {
+import React from "react";
+
+const Greeting: React.FC = () => {
   return (
     <div className="greeting">
       <h1 className="greeting__heading">Hello! 👋🏼</h1>

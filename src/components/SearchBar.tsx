@@ -1,11 +1,12 @@
+import React from "react";
 import { useState } from "react";
 import axios from "axios";
 
-const SearchBar = ({ cityInfo, setCityInfo, setCityWeatherResponse }) => {
+const SearchBar: React.FC<any> = ({ cityInfo, setCityInfo, setCityWeatherResponse }) => {
   const [searchInput, setSearchInput] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSearchInputChange = (e) => {
+  const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setErrorMessage("");
     setCityWeatherResponse(null);
     setSearchInput(e.target.value);
@@ -38,8 +39,9 @@ const SearchBar = ({ cityInfo, setCityInfo, setCityWeatherResponse }) => {
     }
   };
 
-  const handleKeyPress = (e) => {
-    if (e.keyCode === 13) {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // if (e.keyCode === 13) {
+    if (e.key === "Enter") {
       handleSearchSubmit();
     }
   };

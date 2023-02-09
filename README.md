@@ -9,7 +9,7 @@ Create a weather web app that provides the current weather and projected forecas
 - **Error handling** is also implemented so that the application doesn't crash if the API returns a bad response. If no input is supplied, or if the input is invalid (invalid city or typo), a front-end error message is displayed to the user, and the user can re-type an input in the search bar. See the error demo below.
 
 ### Tech Stack:
-- NextJS 
+- NextJS with TypeScript
     - with ReactJS functional components
     - with the API logic stored in the back-end
 - Sass (BEM) for styling
