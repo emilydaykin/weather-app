@@ -1,38 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather App
 
-## Getting Started
+## Criteria:
+Create a weather web app that provides the current weather and projected forecast for either a chosen location or the user’s current location.
 
-First, run the development server:
+## Implementation:
+- I decided to use **NextJS** for this app, since it integrates a backend where the API key can be hidden from the browser/front-end, making the application more secure. NextJS also facilitates deployment with Vercel.
+- This application takes a **user input** in the search bar (city or country name), and returns that location's **current weather** (temperature in °C and °F) and a **10-day forecast** (average temperature), as well as other city details like country, region, continent and local time and date.
+- **Error handling** is also implemented so that the application doesn't crash if the API returns a bad response. If no input is supplied, or if the input is invalid (invalid city or typo), a front-end error message is displayed to the user, and the user can re-type an input in the search bar. See the error demo below.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Tech Stack:
+- NextJS 
+    - with ReactJS functional components
+    - with the API logic stored in the back-end
+- Sass (BEM) for styling
+- Axios for request handling
+- Vercel for deployment
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Delivery:
+Access the [deployed application](https://weather-app-emilydaykin.vercel.app/).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<p align="center">
+  <img src="public/home.png" width="48%"  />
+  <img src="public/weather.png" width="48%"  />
+</p>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+#### Error demo
+<p align="center">
+  <img src="public/error_demo.gif" width="90%"  />
+</p>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Local installation
+To run this application locally:
+1. Clone this repo
+2. Run `npm install`
+3. Run `npm run dev`
