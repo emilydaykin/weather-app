@@ -20,6 +20,10 @@
     margin-right: .5rem;
     color: orange;
     font-weight: 500;
+    
+    &::placeholder {
+      font-weight: 200;
+    }
   }
 
   &__button {
