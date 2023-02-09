@@ -8,7 +8,6 @@ const SearchBar = ({ cityInfo, setCityInfo, setCityWeatherResponse }) => {
   const handleSearchInputChange = (e) => {
     setErrorMessage("");
     setCityWeatherResponse(null);
-    console.log("e.target.value", e.target.value);
     setSearchInput(e.target.value);
   };
 
